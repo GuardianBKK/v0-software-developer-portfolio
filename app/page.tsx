@@ -153,34 +153,34 @@ export default function Home() {
                       <CardContent className="flex flex-col p-6">
                         <div className="flex items-center justify-between">
                           <div>
-                            <h3 className="text-2xl font-bold text-white">Senior Software Developer</h3>
-                            <p className="text-terminal">Tech Solutions Inc.</p>
+                            <h3 className="text-2xl font-bold text-white">Software Developer Intern</h3>
+                            <p className="text-terminal">Bytewerx LLC</p>
                           </div>
                           <Badge variant="outline" className="text-sm border-terminal/30 text-terminal">
-                            2021 - Present
+                            2024 - 2025
                           </Badge>
                         </div>
                         <div className="mt-4">
                           <p className="text-muted-foreground mb-4">
-                            Led the development of enterprise-level applications using React, Node.js, and AWS.
+                            Led the development of web applications using Angular, ASP.NET, and Microsoft SQL.
                           </p>
                           <ul className="grid gap-2">
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Architected and implemented scalable microservices architecture
+                                Developed Tnect mobile validation API and Web application to create and manage API keys for a user.
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Managed a team of 5 developers, implementing Agile methodologies
+                                Worked in a team of 4 to implement the web application and connect it with the validation service.
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Reduced application load time by 40% through performance optimization
+                                Enabled the client to generate and access Tnect service and the admin to manage the service.
                               </span>
                             </li>
                           </ul>
@@ -193,34 +193,34 @@ export default function Home() {
                       <CardContent className="flex flex-col p-6">
                         <div className="flex items-center justify-between">
                           <div>
-                            <h3 className="text-2xl font-bold text-white">Frontend Developer</h3>
-                            <p className="text-terminal">Digital Innovations Co.</p>
+                            <h3 className="text-2xl font-bold text-white">Software Developer Advocate</h3>
+                            <p className="text-terminal">Enterprise Technology</p>
                           </div>
                           <Badge variant="outline" className="text-sm border-terminal/30 text-terminal">
-                            2018 - 2021
+                            2024 - 2024
                           </Badge>
                         </div>
                         <div className="mt-4">
                           <p className="text-muted-foreground mb-4">
-                            Developed responsive web applications using React, Redux, and TypeScript.
+                            Developed IOS mobile applications on swift.
                           </p>
                           <ul className="grid gap-2">
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Built and maintained multiple client-facing applications
+                                Start as a Swift developer tasked to construct IOS mobile applications for Apple sponsored classes at ASU.
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Implemented CI/CD pipelines, improving deployment efficiency by 60%
+                                Teaching software development to over 30 students.
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Collaborated with UX designers to implement pixel-perfect interfaces
+                                Create SNAP EBT application tracker for Non-profit cause.
                               </span>
                             </li>
                           </ul>
@@ -233,34 +233,34 @@ export default function Home() {
                       <CardContent className="flex flex-col p-6">
                         <div className="flex items-center justify-between">
                           <div>
-                            <h3 className="text-2xl font-bold text-white">Junior Web Developer</h3>
-                            <p className="text-terminal">StartUp Ventures</p>
+                            <h3 className="text-2xl font-bold text-white">Research Assistant</h3>
+                            <p className="text-terminal">Arizona State University</p>
                           </div>
                           <Badge variant="outline" className="text-sm border-terminal/30 text-terminal">
-                            2016 - 2018
+                            2025 - 2025
                           </Badge>
                         </div>
                         <div className="mt-4">
                           <p className="text-muted-foreground mb-4">
-                            Worked on full-stack development using JavaScript, HTML/CSS, and PHP.
+                            Assisted Prof Jia Zou with her research in data transformation using LLM
                           </p>
                           <ul className="grid gap-2">
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Developed and maintained company website and client projects
+                                Developed pipeline for failed cases and training the model to overcome those edge cases.
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Implemented responsive designs and ensured cross-browser compatibility
+                                The pipeline model made research smoother by 40%
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Participated in code reviews and contributed to team knowledge sharing
+                                Reduced the time taken for an average research by at-least 30%.
                               </span>
                             </li>
                           </ul>
@@ -317,7 +317,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-terminal"></div>
-                      <span className="text-white">Redux / Context API</span>
+                      <span className="text-white">Angular</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -330,15 +330,15 @@ export default function Home() {
                   <ul className="grid gap-2">
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-terminal"></div>
-                      <span className="text-white">Node.js / Express</span>
+                      <span className="text-white">ASP.NET</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-terminal"></div>
-                      <span className="text-white">Python / Django</span>
+                      <span className="text-white">Python</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-terminal"></div>
-                      <span className="text-white">RESTful APIs</span>
+                      <span className="text-white">Java</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-terminal"></div>
@@ -371,7 +371,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-terminal"></div>
-                      <span className="text-white">AWS / Vercel</span>
+                      <span className="text-white">AWS</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-terminal"></div>
