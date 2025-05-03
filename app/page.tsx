@@ -180,7 +180,7 @@ export default function Home() {
                             <li className="flex items-start gap-2">
                               <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
                               <span className="text-white">
-                                Enabled the client to generate and access Tnect service and the admin to manage the service.
+                                Integrated payment using Stripe
                               </span>
                             </li>
                           </ul>
@@ -411,39 +411,20 @@ export default function Home() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-white">E-Commerce Platform</CardTitle>
+                  <CardTitle className="text-white">Tnect Mobile Validation API</CardTitle>
                   <CardDescription className="text-terminal">
                     A full-stack e-commerce solution with payment integration
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Built with Next.js, TypeScript, Tailwind CSS, and integrated with Stripe for payments. Features
-                    include user authentication, product management, and order tracking.
+                    Built with Angular.js, ASP.NET, MS SQL, and integrated with Stripe for payments. Features
+                    include user authentication, product management, and API usage tracking.
                   </p>
                 </CardContent>
                 <CardFooter>
                   <div className="flex gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      asChild
-                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
-                    >
-                      <Link href="#" target="_blank" rel="noopener noreferrer">
-                        Demo
-                      </Link>
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      asChild
-                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
-                    >
-                      <Link href="#" target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-1 h-4 w-4" /> Code
-                      </Link>
-                    </Button>
+                    
                   </div>
                 </CardFooter>
               </Card>
@@ -459,13 +440,13 @@ export default function Home() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-white">Task Management App</CardTitle>
-                  <CardDescription className="text-terminal">A collaborative task management solution</CardDescription>
+                  <CardTitle className="text-white">Stock Trend Predictor</CardTitle>
+                  <CardDescription className="text-terminal">An application that predicts stock price movement</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Developed using React, Node.js, and MongoDB. Features include real-time updates, team collaboration,
-                    task assignments, and progress tracking.
+                    Started by analyzing sentiments relating to the stock on social media sited like X and Reddit. Then used VADER LLM to categorize these sentiments as positive or negative.
+                    Switching to Groc.AI for better performance and analyses.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -476,17 +457,7 @@ export default function Home() {
                       asChild
                       className="border-terminal/30 text-terminal hover:bg-terminal/10"
                     >
-                      <Link href="#" target="_blank" rel="noopener noreferrer">
-                        Demo
-                      </Link>
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      asChild
-                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
-                    >
-                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://github.com/vanshisop/CSE472-project" target="_blank" rel="noopener noreferrer">
                         <Github className="mr-1 h-4 w-4" /> Code
                       </Link>
                     </Button>
@@ -505,13 +476,15 @@ export default function Home() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-white">AI Content Generator</CardTitle>
-                  <CardDescription className="text-terminal">An AI-powered content creation tool</CardDescription>
+                  <CardTitle className="text-white">Calaminect</CardTitle>
+                  <CardDescription className="text-terminal">Mobile application to connect community at time of a calamity</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Built with Python, Django, and integrated with OpenAI's API. Allows users to generate blog posts,
-                    social media content, and more with AI assistance.
+                    Collaborated on a project hosted by the Department of Homeland Security and sponsored by Apple Inc. Aimed at developing an IOS
+                    application based on swift to help a community connect with one another at the time of a calamity to barter resources and sustain itself.
+                    Designed the UI, wrote a fair share of back end code and also helped integrate the UI with the backend. The team was awarded a prize of
+                    $1000 for the same.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -522,17 +495,7 @@ export default function Home() {
                       asChild
                       className="border-terminal/30 text-terminal hover:bg-terminal/10"
                     >
-                      <Link href="#" target="_blank" rel="noopener noreferrer">
-                        Demo
-                      </Link>
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      asChild
-                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
-                    >
-                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://github.com/BabaFakiir/Calaminect.io" target="_blank" rel="noopener noreferrer">
                         <Github className="mr-1 h-4 w-4" /> Code
                       </Link>
                     </Button>
@@ -542,7 +505,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <Button variant="outline" asChild className="border-terminal/30 text-terminal hover:bg-terminal/10">
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/BabaFakiir" target="_blank" rel="noopener noreferrer">
                   View More Projects on GitHub <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -577,21 +540,21 @@ export default function Home() {
                     <Mail className="h-5 w-5 text-terminal" />
                     <div className="grid gap-0.5">
                       <div className="font-medium text-white">Email</div>
-                      <div className="text-sm text-terminal">your.email@example.com</div>
+                      <div className="text-sm text-terminal">sarthak.agg66@gmail.com</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Linkedin className="h-5 w-5 text-terminal" />
                     <div className="grid gap-0.5">
                       <div className="font-medium text-white">LinkedIn</div>
-                      <div className="text-sm text-terminal">linkedin.com/in/yourprofile</div>
+                      <div className="text-sm text-terminal">https://www.linkedin.com/in/sarthak-aggarwal-6ba328221/</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Github className="h-5 w-5 text-terminal" />
                     <div className="grid gap-0.5">
                       <div className="font-medium text-white">GitHub</div>
-                      <div className="text-sm text-terminal">github.com/yourusername</div>
+                      <div className="text-sm text-terminal">https://github.com/BabaFakiir</div>
                     </div>
                   </div>
                 </CardContent>
@@ -658,16 +621,16 @@ export default function Home() {
       <footer className="w-full border-t border-terminal/20 py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} <span className="text-terminal">Your Name</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="text-terminal">Sarthak Aggarwal</span>. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/BabaFakiir" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
                 <Github className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
               </Button>
             </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/sarthak-aggarwal-6ba328221/" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
                 <Linkedin className="h-4 w-4" />
                 <span className="sr-only">LinkedIn</span>
