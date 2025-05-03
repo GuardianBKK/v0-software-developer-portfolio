@@ -64,7 +64,7 @@ export default function Home() {
                       </div>
                       <div className="mt-2">
                         <span className="text-terminal">Hi, I'm </span>
-                        <span className="text-white font-bold">Your Name</span>
+                        <span className="text-white font-bold">Sarthak Aggarwal</span>
                       </div>
                       <div className="mt-1 flex">
                         <span className="text-terminal">Role: </span>
@@ -81,7 +81,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    A passionate software developer specializing in building exceptional digital experiences.
+                    A passionate software developer striding to create something bigger and better.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -95,13 +95,13 @@ export default function Home() {
                   </Button>
                 </div>
                 <div className="flex gap-4 mt-4">
-                  <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://github.com/BabaFakiir" target="_blank" rel="noopener noreferrer">
                     <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
                       <Github className="h-5 w-5" />
                       <span className="sr-only">GitHub</span>
                     </Button>
                   </Link>
-                  <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://www.linkedin.com/in/sarthak-aggarwal-6ba328221/" target="_blank" rel="noopener noreferrer">
                     <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
                       <Linkedin className="h-5 w-5" />
                       <span className="sr-only">LinkedIn</span>
