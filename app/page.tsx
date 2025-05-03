@@ -122,7 +122,7 @@ export default function Home() {
                     alt="Developer Portrait"
                     className="relative z-10 aspect-square overflow-hidden rounded-full object-cover border-2 border-terminal glow-border"
                     height="400"
-                    src="/headshot.jpg?height=400&width=400"
+                    src="/headshot2.jpeg?height=400&width=400"
                     width="400"
                   />
                 </div>
