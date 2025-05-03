@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 6.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 6.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+  }
+
+  .code-text {
+    font-family: "Courier New", monospace;
+  }
+
+  .terminal-window {
+    @apply border border-terminal/30 rounded-md overflow-hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+  }
+
+  .terminal-header {
+    @apply bg-black/60 p-2 flex items-center;
+  }
+
+  .terminal-circle {
+    @apply w-3 h-3 rounded-full mx-1;
+  }
+
+  .terminal-content {
+    @apply p-4 bg-black/40 text-terminal font-mono;
+  }
+
+  .matrix-background {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .matrix-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='20' font-family='monospace' font-size='10' fill='%2300FF00'%3E01%3C/text%3E%3Ctext x='30' y='40' font-family='monospace' font-size='10' fill='%2300FF00'%3E10%3C/text%3E%3Ctext x='50' y='60' font-family='monospace' font-size='10' fill='%2300FF00'%3E01%3C/text%3E%3Ctext x='70' y='80' font-family='monospace' font-size='10' fill='%2300FF00'%3E10%3C/text%3E%3C/svg%3E");
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .grid-bg {
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+}

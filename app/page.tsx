@@ -1,0 +1,687 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import { ArrowRight, Code, Github, Linkedin, Mail, Terminal, Twitter } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+
+export const metadata: Metadata = {
+  title: "Developer Portfolio",
+  description: "A showcase of my work and skills as a software developer",
+}
+
+export default function Home() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      <header className="sticky top-0 z-50 w-full border-b border-terminal/20 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center justify-between">
+          <Link href="/" className="font-bold flex items-center">
+            <Terminal className="h-5 w-5 text-terminal mr-2" />
+            <span className="text-terminal glow-text">&lt;</span>
+            <span className="text-white">Dev</span>
+            <span className="text-terminal glow-text">/&gt;</span>
+          </Link>
+          <nav className="hidden md:flex gap-6">
+            <Link href="#experience" className="text-sm font-medium text-white hover:text-terminal transition-colors">
+              Experience
+            </Link>
+            <Link href="#skills" className="text-sm font-medium text-white hover:text-terminal transition-colors">
+              Skills
+            </Link>
+            <Link href="#projects" className="text-sm font-medium text-white hover:text-terminal transition-colors">
+              Projects
+            </Link>
+            <Link href="#contact" className="text-sm font-medium text-white hover:text-terminal transition-colors">
+              Contact
+            </Link>
+          </nav>
+          <Button asChild variant="outline" className="border-terminal text-terminal hover:bg-terminal/10">
+            <Link href="#contact">
+              <span className="mr-1">&gt;</span> Get in Touch
+            </Link>
+          </Button>
+        </div>
+      </header>
+      <main className="flex-1 grid-bg">
+        <section className="w-full py-24 md:py-32 lg:py-40 border-b border-terminal/20 matrix-background">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <div className="terminal-window mb-4 max-w-md">
+                    <div className="terminal-header">
+                      <div className="terminal-circle bg-red-500"></div>
+                      <div className="terminal-circle bg-yellow-500"></div>
+                      <div className="terminal-circle bg-green-500"></div>
+                      <div className="ml-2 text-xs text-white/70">terminal</div>
+                    </div>
+                    <div className="terminal-content">
+                      <div className="flex">
+                        <span className="text-white/70">$</span>
+                        <span className="ml-2">./introduce.sh</span>
+                      </div>
+                      <div className="mt-2">
+                        <span className="text-terminal">Hi, I'm </span>
+                        <span className="text-white font-bold">Your Name</span>
+                      </div>
+                      <div className="mt-1 flex">
+                        <span className="text-terminal">Role: </span>
+                        <span className="ml-2 text-white">Software Developer</span>
+                      </div>
+                      <div className="mt-1 flex">
+                        <span className="text-terminal">Status: </span>
+                        <span className="ml-2 text-white">Ready for new challenges</span>
+                      </div>
+                      <div className="mt-3 flex">
+                        <span className="text-white/70">$</span>
+                        <span className="ml-2 text-white animate-text-blink">_</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                    A passionate software developer specializing in building exceptional digital experiences.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Button asChild className="bg-terminal hover:bg-terminal/90 text-black font-bold">
+                    <Link href="#projects">
+                      View My Work <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild className="border-terminal text-terminal hover:bg-terminal/10">
+                    <Link href="#contact">Contact Me</Link>
+                  </Button>
+                </div>
+                <div className="flex gap-4 mt-4">
+                  <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
+                      <Github className="h-5 w-5" />
+                      <span className="sr-only">GitHub</span>
+                    </Button>
+                  </Link>
+                  <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
+                      <Linkedin className="h-5 w-5" />
+                      <span className="sr-only">LinkedIn</span>
+                    </Button>
+                  </Link>
+                  <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
+                      <Twitter className="h-5 w-5" />
+                      <span className="sr-only">Twitter</span>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full bg-terminal/20 blur-xl"></div>
+                  <img
+                    alt="Developer Portrait"
+                    className="relative z-10 aspect-square overflow-hidden rounded-full object-cover border-2 border-terminal glow-border"
+                    height="400"
+                    src="/placeholder.svg?height=400&width=400"
+                    width="400"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="experience" className="w-full py-12 md:py-24 lg:py-32 border-b border-terminal/20">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-terminal/20 px-3 py-1 text-sm text-terminal border border-terminal/30 glow-border">
+                  <Code className="w-4 h-4 inline mr-1" /> Experience
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
+                  Work <span className="text-terminal glow-text">Experience</span>
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  My professional journey and roles I've held.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-5xl py-12">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem className="md:basis-1/1 lg:basis-1/1">
+                    <Card className="border-terminal/30 bg-black/40 glow-border">
+                      <CardContent className="flex flex-col p-6">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="text-2xl font-bold text-white">Senior Software Developer</h3>
+                            <p className="text-terminal">Tech Solutions Inc.</p>
+                          </div>
+                          <Badge variant="outline" className="text-sm border-terminal/30 text-terminal">
+                            2021 - Present
+                          </Badge>
+                        </div>
+                        <div className="mt-4">
+                          <p className="text-muted-foreground mb-4">
+                            Led the development of enterprise-level applications using React, Node.js, and AWS.
+                          </p>
+                          <ul className="grid gap-2">
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Architected and implemented scalable microservices architecture
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Managed a team of 5 developers, implementing Agile methodologies
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Reduced application load time by 40% through performance optimization
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                  <CarouselItem className="md:basis-1/1 lg:basis-1/1">
+                    <Card className="border-terminal/30 bg-black/40 glow-border">
+                      <CardContent className="flex flex-col p-6">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="text-2xl font-bold text-white">Frontend Developer</h3>
+                            <p className="text-terminal">Digital Innovations Co.</p>
+                          </div>
+                          <Badge variant="outline" className="text-sm border-terminal/30 text-terminal">
+                            2018 - 2021
+                          </Badge>
+                        </div>
+                        <div className="mt-4">
+                          <p className="text-muted-foreground mb-4">
+                            Developed responsive web applications using React, Redux, and TypeScript.
+                          </p>
+                          <ul className="grid gap-2">
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Built and maintained multiple client-facing applications
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Implemented CI/CD pipelines, improving deployment efficiency by 60%
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Collaborated with UX designers to implement pixel-perfect interfaces
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                  <CarouselItem className="md:basis-1/1 lg:basis-1/1">
+                    <Card className="border-terminal/30 bg-black/40 glow-border">
+                      <CardContent className="flex flex-col p-6">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="text-2xl font-bold text-white">Junior Web Developer</h3>
+                            <p className="text-terminal">StartUp Ventures</p>
+                          </div>
+                          <Badge variant="outline" className="text-sm border-terminal/30 text-terminal">
+                            2016 - 2018
+                          </Badge>
+                        </div>
+                        <div className="mt-4">
+                          <p className="text-muted-foreground mb-4">
+                            Worked on full-stack development using JavaScript, HTML/CSS, and PHP.
+                          </p>
+                          <ul className="grid gap-2">
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Developed and maintained company website and client projects
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Implemented responsive designs and ensured cross-browser compatibility
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="h-2 w-2 translate-y-1 rounded-full bg-terminal"></div>
+                              <span className="text-white">
+                                Participated in code reviews and contributed to team knowledge sharing
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                </CarouselContent>
+                <div className="flex justify-center mt-4">
+                  <CarouselPrevious className="relative static translate-y-0 left-0 border-terminal/30 text-terminal hover:bg-terminal/10 hover:text-terminal" />
+                  <CarouselNext className="relative static translate-y-0 right-0 border-terminal/30 text-terminal hover:bg-terminal/10 hover:text-terminal" />
+                </div>
+              </Carousel>
+            </div>
+          </div>
+        </section>
+        <section id="skills" className="w-full py-12 md:py-24 lg:py-32 border-b border-terminal/20">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-terminal/20 px-3 py-1 text-sm text-terminal border border-terminal/30 glow-border">
+                  <Code className="w-4 h-4 inline mr-1" /> Skills
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
+                  Technical <span className="text-terminal glow-text">Expertise</span>
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Here are some of the technologies and tools I work with.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+              <Card className="border-terminal/30 bg-black/40 glow-border">
+                <CardHeader>
+                  <CardTitle className="text-white">Frontend</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="grid gap-2">
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">React / Next.js</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">TypeScript</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">Tailwind CSS</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">HTML5 / CSS3</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">Redux / Context API</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="border-terminal/30 bg-black/40 glow-border">
+                <CardHeader>
+                  <CardTitle className="text-white">Backend</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="grid gap-2">
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">Node.js / Express</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">Python / Django</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">RESTful APIs</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">GraphQL</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">SQL / NoSQL Databases</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="border-terminal/30 bg-black/40 glow-border">
+                <CardHeader>
+                  <CardTitle className="text-white">Tools & Others</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="grid gap-2">
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">Git / GitHub</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">Docker / Kubernetes</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">CI/CD Pipelines</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">AWS / Vercel</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-terminal"></div>
+                      <span className="text-white">Testing (Jest, Cypress)</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section id="projects" className="w-full py-12 md:py-24 lg:py-32 border-b border-terminal/20">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-terminal/20 px-3 py-1 text-sm text-terminal border border-terminal/30 glow-border">
+                  <Code className="w-4 h-4 inline mr-1" /> Projects
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
+                  Featured <span className="text-terminal glow-text">Work</span>
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Check out some of my recent projects.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
+              <Card className="overflow-hidden border-terminal/30 bg-black/40 glow-border">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-terminal/10"></div>
+                  <img
+                    alt="Project 1"
+                    className="aspect-video object-cover w-full"
+                    height="225"
+                    src="/placeholder.svg?height=225&width=400"
+                    width="400"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-white">E-Commerce Platform</CardTitle>
+                  <CardDescription className="text-terminal">
+                    A full-stack e-commerce solution with payment integration
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Built with Next.js, TypeScript, Tailwind CSS, and integrated with Stripe for payments. Features
+                    include user authentication, product management, and order tracking.
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
+                    >
+                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                        Demo
+                      </Link>
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
+                    >
+                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-1 h-4 w-4" /> Code
+                      </Link>
+                    </Button>
+                  </div>
+                </CardFooter>
+              </Card>
+              <Card className="overflow-hidden border-terminal/30 bg-black/40 glow-border">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-terminal/10"></div>
+                  <img
+                    alt="Project 2"
+                    className="aspect-video object-cover w-full"
+                    height="225"
+                    src="/placeholder.svg?height=225&width=400"
+                    width="400"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-white">Task Management App</CardTitle>
+                  <CardDescription className="text-terminal">A collaborative task management solution</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Developed using React, Node.js, and MongoDB. Features include real-time updates, team collaboration,
+                    task assignments, and progress tracking.
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
+                    >
+                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                        Demo
+                      </Link>
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
+                    >
+                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-1 h-4 w-4" /> Code
+                      </Link>
+                    </Button>
+                  </div>
+                </CardFooter>
+              </Card>
+              <Card className="overflow-hidden border-terminal/30 bg-black/40 glow-border">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-terminal/10"></div>
+                  <img
+                    alt="Project 3"
+                    className="aspect-video object-cover w-full"
+                    height="225"
+                    src="/placeholder.svg?height=225&width=400"
+                    width="400"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-white">AI Content Generator</CardTitle>
+                  <CardDescription className="text-terminal">An AI-powered content creation tool</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Built with Python, Django, and integrated with OpenAI's API. Allows users to generate blog posts,
+                    social media content, and more with AI assistance.
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
+                    >
+                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                        Demo
+                      </Link>
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      asChild
+                      className="border-terminal/30 text-terminal hover:bg-terminal/10"
+                    >
+                      <Link href="#" target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-1 h-4 w-4" /> Code
+                      </Link>
+                    </Button>
+                  </div>
+                </CardFooter>
+              </Card>
+            </div>
+            <div className="flex justify-center">
+              <Button variant="outline" asChild className="border-terminal/30 text-terminal hover:bg-terminal/10">
+                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  View More Projects on GitHub <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-terminal/20 px-3 py-1 text-sm text-terminal border border-terminal/30 glow-border">
+                  <Code className="w-4 h-4 inline mr-1" /> Contact
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
+                  Get <span className="text-terminal glow-text">In Touch</span>
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
+              <Card className="border-terminal/30 bg-black/40 glow-border">
+                <CardHeader>
+                  <CardTitle className="text-white">Contact Information</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Feel free to reach out through any of these channels
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="grid gap-4">
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5 text-terminal" />
+                    <div className="grid gap-0.5">
+                      <div className="font-medium text-white">Email</div>
+                      <div className="text-sm text-terminal">your.email@example.com</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Linkedin className="h-5 w-5 text-terminal" />
+                    <div className="grid gap-0.5">
+                      <div className="font-medium text-white">LinkedIn</div>
+                      <div className="text-sm text-terminal">linkedin.com/in/yourprofile</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Github className="h-5 w-5 text-terminal" />
+                    <div className="grid gap-0.5">
+                      <div className="font-medium text-white">GitHub</div>
+                      <div className="text-sm text-terminal">github.com/yourusername</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="border-terminal/30 bg-black/40 glow-border">
+                <CardHeader>
+                  <CardTitle className="text-white">Send a Message</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    Fill out the form below and I'll get back to you as soon as possible
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form className="grid gap-4">
+                    <div className="grid gap-2">
+                      <label
+                        htmlFor="name"
+                        className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        Name
+                      </label>
+                      <input
+                        id="name"
+                        className="flex h-10 w-full rounded-md border border-terminal/30 bg-black/40 px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div className="grid gap-2">
+                      <label
+                        htmlFor="email"
+                        className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        Email
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        className="flex h-10 w-full rounded-md border border-terminal/30 bg-black/40 px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        placeholder="Your email"
+                      />
+                    </div>
+                    <div className="grid gap-2">
+                      <label
+                        htmlFor="message"
+                        className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        className="flex min-h-[120px] w-full rounded-md border border-terminal/30 bg-black/40 px-3 py-2 text-sm text-white ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        placeholder="Your message"
+                      ></textarea>
+                    </div>
+                    <Button type="submit" className="w-full bg-terminal hover:bg-terminal/90 text-black font-bold">
+                      Send Message
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="w-full border-t border-terminal/20 py-6 md:py-0">
+        <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} <span className="text-terminal">Your Name</span>. All rights reserved.
+          </p>
+          <div className="flex gap-4">
+            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
+                <Github className="h-4 w-4" />
+                <span className="sr-only">GitHub</span>
+              </Button>
+            </Link>
+            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
+                <Linkedin className="h-4 w-4" />
+                <span className="sr-only">LinkedIn</span>
+              </Button>
+            </Link>
+            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="text-white hover:text-terminal hover:bg-terminal/10">
+                <Twitter className="h-4 w-4" />
+                <span className="sr-only">Twitter</span>
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
