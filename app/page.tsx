@@ -406,7 +406,7 @@ export default function Home() {
                     alt="Project 1"
                     className="aspect-video object-cover w-full"
                     height="225"
-                    src="/placeholder.svg?height=225&width=400"
+                    src="/bytewerx.png?height=225&width=400"
                     width="400"
                   />
                 </div>
@@ -435,7 +435,7 @@ export default function Home() {
                     alt="Project 2"
                     className="aspect-video object-cover w-full"
                     height="225"
-                    src="/placeholder.svg?height=225&width=400"
+                    src="/stock pred.webp?height=225&width=400"
                     width="400"
                   />
                 </div>
@@ -471,7 +471,7 @@ export default function Home() {
                     alt="Project 3"
                     className="aspect-video object-cover w-full"
                     height="225"
-                    src="/placeholder.svg?height=225&width=400"
+                    src="/apple logo.jpg?height=225&width=400"
                     width="400"
                   />
                 </div>
