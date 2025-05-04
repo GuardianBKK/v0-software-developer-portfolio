@@ -2,15 +2,43 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Code, Github, Linkedin, Mail, Terminal, Twitter } from "lucide-react"
 
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+import { send } from '@emailjs/browser';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import EmailSender from '@/components/email-sender'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 export const metadata: Metadata = {
   title: "Developer Portfolio",
   description: "A showcase of my work and skills as a software developer",
 }
+
+const ContactForm = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Replace with your actual EmailJS credentials
+    const publicKey = 'eW2iyG1ICeVvRiZfG';
+    const serviceId = 'service_a9d2ixs';
+    const templateId = 'template_nicuui8';
+
+    if (form.current) {
+      send(serviceId, templateId, Object.fromEntries(new FormData(form.current)), publicKey)
+        .then((result) => {
+          console.log('SUCCESS!', result.text);
+          form.current?.reset(); // Clear the form after successful submission
+        })
+        .catch((error) => {
+          console.log('FAILED...', error.text);
+        });
+    }
+  };
+
 
 export default function Home() {
   return (
@@ -567,7 +595,11 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="grid gap-4">
+                <form
+                  ref={form}
+                  className="grid gap-4"
+                  onSubmit={sendEmail}
+                >
                     <div className="grid gap-2">
                       <label
                         htmlFor="name"
@@ -577,10 +609,13 @@ export default function Home() {
                       </label>
                       <input
                         id="name"
+                        name="from_name"
+                        required
                         className="flex h-10 w-full rounded-md border border-terminal/30 bg-black/40 px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                         placeholder="Your name"
                       />
                     </div>
+
                     <div className="grid gap-2">
                       <label
                         htmlFor="email"
@@ -591,10 +626,13 @@ export default function Home() {
                       <input
                         id="email"
                         type="email"
+                        name="reply_to"
+                        required
                         className="flex h-10 w-full rounded-md border border-terminal/30 bg-black/40 px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                         placeholder="Your email"
                       />
                     </div>
+
                     <div className="grid gap-2">
                       <label
                         htmlFor="message"
@@ -604,10 +642,13 @@ export default function Home() {
                       </label>
                       <textarea
                         id="message"
+                        name="message"
+                        required
                         className="flex min-h-[120px] w-full rounded-md border border-terminal/30 bg-black/40 px-3 py-2 text-sm text-white ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                         placeholder="Your message"
                       ></textarea>
                     </div>
+
                     <Button type="submit" className="w-full bg-terminal hover:bg-terminal/90 text-black font-bold">
                       Send Message
                     </Button>
